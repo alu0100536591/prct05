@@ -2,7 +2,9 @@
 
 require "./gcd.rb"
 
-class Fraccion
+class Fraccion 
+	attr_accessor :_num, :_den
+	
 	def initialize(n,d)
 		@_num, @_den = n, d
 		minimize()
@@ -17,8 +19,21 @@ class Fraccion
 	def to_s
 		"#{@_num} / #{@_den}"
 	end
+	
+	def sum(frac)
+		n = (@_num*frac._den)+(@_den*frac._num)
+		d = (@_den*frac._den)
+		
+		Fraccion.new(n,d)
+	end
 end
 
-f1 = Fraccion.new(20,5)
+f1 = Fraccion.new(5,4)
+f2 = Fraccion.new(1,6)
 puts f1
+puts f2
+
+sum = f1.sum(f2)
+puts sum
+
 
