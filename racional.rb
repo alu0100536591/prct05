@@ -20,8 +20,15 @@ class Fraccion
 		"#{@_num} / #{@_den}"
 	end
 	
-	def sum(frac)
+	def sum(frac) #suma
 		n = (@_num*frac._den)+(@_den*frac._num)
+		d = (@_den*frac._den)
+		
+		Fraccion.new(n,d)
+	end
+	
+	def sub(frac) #resta
+		n = (@_num*frac._den)-(@_den*frac._num)
 		d = (@_den*frac._den)
 		
 		Fraccion.new(n,d)
@@ -35,5 +42,8 @@ puts f2
 
 sum = f1.sum(f2)
 puts sum
+
+sub = f1.sub(f2)
+puts sub
 
 
