@@ -55,15 +55,15 @@ puts f1
 puts f2
 
 sum = f1.+(f2)
-puts sum
+puts "Sum = #{sum}"
 
 sub = f1.-(f2)
-puts sub
+puts "Sub = #{sub}"
 
 prod = f1.*(f2)
-puts sub
+puts "Prod = #{prod}" 
 
 div = f1./(f2)
-puts div
+puts "Div = #{div}"
 
 
